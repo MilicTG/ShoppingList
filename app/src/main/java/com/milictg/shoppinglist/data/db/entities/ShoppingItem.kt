@@ -1,4 +1,4 @@
-package com.milictg.shoppinglist
+package com.milictg.shoppinglist.data.db.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

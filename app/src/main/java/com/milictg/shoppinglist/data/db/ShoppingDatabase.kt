@@ -1,9 +1,10 @@
-package com.milictg.shoppinglist
+package com.milictg.shoppinglist.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.milictg.shoppinglist.data.db.entities.ShoppingItem
 
 @Database(entities = [ShoppingItem::class], version = 1)
 abstract class ShoppingDatabase : RoomDatabase() {
@@ -20,7 +21,8 @@ abstract class ShoppingDatabase : RoomDatabase() {
                 instance
                     ?: createDatabase(
                         context
-                    ).also { instance = it }
+                    )
+                        .also { instance = it }
             }
 
         private fun createDatabase(context: Context) =
