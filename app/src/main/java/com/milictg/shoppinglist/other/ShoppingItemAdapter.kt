@@ -21,7 +21,7 @@ class ShoppingItemAdapter(
     }
 
     override fun getItemCount(): Int {
-        items.size
+        return items.size
     }
 
     override fun onBindViewHolder(holder: ShoppingViewHolder, position: Int) {
